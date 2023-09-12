@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title Ping Test
+  body
+    h1 Ping Test
+
+    h2 Recent queries
+    ul
+      each val in domains
+        li= val
+
+    form(action="/ping" method="POST")
+      label(for="domain") Domain:
+      input(type="text" id="domain" name="domain" required)
+      button(type="submit") Ping
