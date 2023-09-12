@@ -5,10 +5,11 @@ html
   body
     h1 Ping Test
 
-    h2 Recent queries
-    ul
-      each val in domains
-        li= val
+    h2 Weather Report 
+    div
+      h3 Location: #{report.location}
+      h3 Temperature: #{report.temperature}
+      h3 Condition: #{report.condition}
 
     form(action="/ping" method="POST")
       label(for="domain") Domain:

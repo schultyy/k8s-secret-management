@@ -1,0 +1,16 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: cluster
+  region: us-east-2 
+  version: "1.24"
+
+managedNodeGroups:
+  - name: ng-1
+    labels: 
+    instanceType: m5.xlarge
+    desiredCapacity: 5
+    volumeSize: 80
+    privateNetworking: true
+
